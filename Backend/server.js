@@ -29,7 +29,7 @@ app.use("/pdf", express.static(path.join(__dirname, "pdfs")));
 app.use("/api/pdf", pdfRoute);
 app.use(termsAndCondition);
 const mongoURI =
-  "mongodb+srv://user:user@cluster0.syund4p.mongodb.net/billingsoftware";
+  "mongodb+srv://user:user@cluster0.syund4p.mongodb.net/shiroenterprise";
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

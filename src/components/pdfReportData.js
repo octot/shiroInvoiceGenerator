@@ -30,7 +30,8 @@ import axios from "axios";
 import { URI } from "./CONSTANTS";
 import { StyledButton } from "./StyleButton";
 import AddIcon from "@mui/icons-material/Add";
-import { FaEye, FaEyeSlash } from "react-icons/fa"; // Using react-icons for the eye icon
+import { FaEye, FaEyeSlash } from "react-icons/fa"; 
+import image from '../images/onlyLogo.jpg'
 const PdfReportData = ({
   invoiceType,
   invoiceDate,
@@ -57,16 +58,21 @@ const PdfReportData = ({
   const gstTotalFInalListMap = getGstTotalFinalListMap();
   const gstCellContainerValueMap = getGstCellContainerValueMap();
   const [paymentDetails, setPaymentDetails] = useState({
-    accountName: "Your Account Name",
-    accountNumber: "123456789012",
-    bankName: "Your Bank Name",
+    accountName: "Shiro Printing and Packaging",
+    accountNumber: "40950620139",
+    bankName: "State Bank of India, Pallithura Branch",
     gpayNumber: "9876543210",
+    ifscCode:"SBIN0070045"
   });
 
   const [inputText, setInputText] = useState("");
   const [bulletPoints, setBulletPoints] = useState([
-    "All taxes are calculated based on the current tax laws and regulations.",
-    "The customer is responsible for any additional taxes or fees that may apply.",
+    "Goods once sold will not be taken back, replaced or refunded",
+    "Warranty strictly as per the vendor terms only",
+    "There will be no warranty or replacement for physical or external damages caused by the courier service.",
+    "After the payment due date, interest @24% per month will be charged on the amount overdue.",
+    "Rs.500 will be charged for cheque if it is bounced.",
+    "The cheque has to be given within 5 days of purchase.",
   ]);
   const [editingIndex, setEditingIndex] = useState(null);
   const [editText, setEditText] = useState("");
@@ -219,7 +225,7 @@ const PdfReportData = ({
           myCompany={myCompany}
           shipmentDetails={shipmentDetails}
           itemsInPiecesList={itemsInPiecesList}
-          // image={image}
+          image={image}
           billNo={billNo}
           customerInfo={customerInfo}
           shipmentInfo={shipmentInfo}
@@ -380,6 +386,8 @@ const PdfReportData = ({
     setBulletPointsVisible(false);
   };
   const orderedBulletPoints = orderBulletPoints(bulletPoints);
+
+
   /*
   useEffect(() => {
     // Fetch image URL from the API
@@ -530,7 +538,7 @@ const PdfReportData = ({
                 myCompany={myCompany}
                 shipmentDetails={shipmentDetails}
                 itemsInPiecesList={itemsInPiecesList}
-                // image={image}
+                image={image}
                 billNo={billNo}
                 customerInfo={customerInfo}
                 shipmentInfo={shipmentInfo}

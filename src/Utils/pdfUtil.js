@@ -34,6 +34,7 @@ export const getPaymentDetails = (paymentDetails) => {
     { label: "AccountNumber", value: paymentDetails.accountNumber },
     { label: "BankName", value: paymentDetails.bankName },
     { label: "GpayNumber", value: paymentDetails.gpayNumber },
+    { label: "IFSC CODE", value: paymentDetails.ifscCode },
   ];
 };
 

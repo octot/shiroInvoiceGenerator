@@ -5,11 +5,11 @@ import { URI } from "./CONSTANTS";
 import { Button } from "@mui/material";
 const CompanyDetailsForm = () => {
   const [formData, setFormData] = useState({
-    companyName: "Your Company Name",
-    gstNumber: "XXAAAB1234C1Z5",
-    address: "1234 Your Street, Your City, Your State, 123456",
-    phone: "+91-1234567890",
-    email: "youremail@example.com",
+    companyName: "SHIRO Printing & Packaging",
+    gstNumber: "32MTHPS2278G1Z8",
+    address: "St. Andrews Bridge, Chittatimukku, Opposite Mini Industry",
+    phone: "8714095116",
+    email: "shithin.shiro@gmail.com",
   });
   const handleChange = (e) => {
     const { name, value } = e.target;

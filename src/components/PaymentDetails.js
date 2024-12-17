@@ -43,11 +43,22 @@ const PaymentDetails = ({
               className="payment-textfield"
             />
           </Grid>
-          <Grid item xs={12} sm={6} className="payment-grid-item">
+          {/* <Grid item xs={12} sm={6} className="payment-grid-item">
             <TextField
               name="gpayNumber"
               label="G-Pay Number"
               value={paymentDetails.gpayNumber}
+              onChange={handlePaymentDetailsChange}
+              margin="none"
+              className="payment-textfield"
+            />
+          </Grid> */}
+
+          <Grid item xs={12} sm={6} className="payment-grid-item">
+            <TextField
+              name="ifscCode"
+              label="IFSC CODE"
+              value={paymentDetails.ifscCode}
               onChange={handlePaymentDetailsChange}
               margin="none"
               className="payment-textfield"

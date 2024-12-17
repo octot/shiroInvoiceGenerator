@@ -1,6 +1,6 @@
 import {
   Font,
-  // Image,
+  Image,
   Document,
   Page,
   Text,
@@ -32,7 +32,9 @@ const styles = StyleSheet.create({
   },
   senderDetails: {
     width: "30%",
-    textAlign: "right",
+    textAlign: "right", // Aligns text to the right
+    direction: "ltr", // Ensures text flows from left to right
+    unicodeBidi: "plaintext", // Ensures no bidi overrides interfere
   },
   title: {
     fontSize: 20,
@@ -123,7 +125,7 @@ const PdfReport = ({
   itemsInPieces,
   shipmentDetails,
   itemsInPiecesList,
-  // image,
+  image,
   sampleLogo,
   billNo,
   customerInfo,
@@ -145,14 +147,12 @@ const PdfReport = ({
         {/* Header Section */}
         <View style={styles.headerContainer}>
           <View style={styles.logoSection}>
-            {/*
             {image && (
               <Image
                 style={styles.logo}
                 src={image} // Use the image URL here
               />
             )}
-            */}
             <Text>{myCompany.companyName || "Company Name"}</Text>
             <Text>{myCompany.gstNumber || "GST: 27XXXXXXXXXXXXXX"}</Text>
           </View>
@@ -306,9 +306,14 @@ const PdfReport = ({
                 <Text style={styles.label}>Bank Name:</Text>
                 <Text>{paymentDetails?.bankName || ""}</Text>
               </View>
-              <View style={styles.detailItem}>
+              {/* <View style={styles.detailItem}>
                 <Text style={styles.label}>GPay Number:</Text>
                 <Text>{paymentDetails?.gpayNumber || ""}</Text>
+              </View> */}
+
+              <View style={styles.detailItem}>
+                <Text style={styles.label}>IFSC Code:</Text>
+                <Text>{paymentDetails?.ifscCode || ""}</Text>
               </View>
             </View>
           </View>
