@@ -1,0 +1,17 @@
+Item Name
+Description
+HSN CODE
+QTY
+Rate
+CGST(%)
+SGST(%)
+IGST Rate (%)
+
+  <Button variant="contained" onClick={handleCopyValues}
+            sx={{ mt: 1, mr: 2, backgroundColor: 'blue', '&:hover': { backgroundColor: 'darkblue' } }}
+          >
+            Fill with Customer Details
+          </Button>
+          <Button variant="contained" onClick={handleClearValues}
+            sx={{ mt: 1, backgroundColor: 'red', '&:hover': { backgroundColor: 'darkred' } }}
+          >Clear Shipment Details</Button>

@@ -1,0 +1,113 @@
+.form-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(173, 216, 230, 0.5); /* Light blue shadow */
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(173, 216, 230, 0.7); /* Slightly darker light blue shadow on hover */
+}
+
+
+.form-wrapper {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Adjust the gap between fields as needed */
+}
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color:blue;
+  margin-bottom: 24px;
+}
+.form-title-box
+{
+  /* background-color: blue; */
+}
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-button {
+  width: 20%;
+  text-align: center;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 40% !important;
+  transition: background-color 0.2s ease;
+}
+.image-position {
+  margin-left: 150px;
+}
+.submit-button:hover {
+  background-color: #357abd;
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Add some basic responsiveness */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 10px;
+  }
+
+  .form-wrapper {
+    padding: 16px;
+  }
+
+  .form-title {
+    font-size: 20px;
+  }
+}
