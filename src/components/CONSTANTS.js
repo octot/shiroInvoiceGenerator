@@ -7,8 +7,8 @@ export const URI = 'https://retailbilling.onrender.com/api'
 export const noApi='https://retailbilling.onrender.com';
 */
 
-export const URI = 'https://shiroenterprise.onrender.com/api'
-export const noApi='https://shiroenterprise.onrender.com';
+export const URI = 'https://shiroinvoicegenerator-1.onrender.com/api'
+export const noApi='https://shiroinvoicegenerator-1.onrender.com';
 
 
 
